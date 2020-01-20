@@ -1,38 +1,159 @@
 .App {
   text-align: center;
+  height: 100vh;
+  width: 100%;
+  background-color: darkslategray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container-create {
+  height: 30vh;
+  width: 20vw;
+  background-color: cadetblue;
+  border: 5px solid burlywood;
+  border-radius: 5px;
+  margin-bottom: 1%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container-post {
+  height: 50vh;
+  width: 60vw;
+  background-color: cadetblue;
+  border: 5px solid burlywood;
+  border-radius: 5px;
+  overflow: scroll;
+  padding-bottom: 1%;
+  padding-top: 1%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-evenly;
+}
+
+.container-food-input {
+  margin-top: 10%;
+}
+
+.name-display {
+  background-color: rgb(129, 129, 129);
+  height: 5vh;
+  width: 40vw;
+  text-align: start;
+  color: white;
+  margin: 1%;
+  padding: 1%;
+}
+
+.flex-display {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-food {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.flex-all {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1%;
+  margin-left: 3%;
+  background-color: rgb(66, 66, 66);
+  width: 90%;
+  padding: 2%;
+}
+
+.word {
+  text-align: start;
+  font-weight: bold;
+  margin-bottom: 1%;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.edit {
+  font-weight: bold;
+  font-size: large;
+  color: white;
+  margin-top: -3vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.delete {
+  font-weight: bold;
+  font-size: large;
+  color: white;
+  margin-top: -1vh;
+}
+
+.main-input {
+  background-color: rgb(129, 129, 129);
+  color: white;
+  font-weight: bold;
+  width: 15vw;
+}
+
+.edit-input {
+  background-color: rgb(129, 129, 129);
+  color: white;
+  font-weight: bold;
+  width: 12vw;
+  margin-left: 15%;
+  margin-bottom: 5px;
+}
+
+::placeholder {
+  color: white;
+}
+
+.add-button {
+  width: 10vw;
+  height: 5vh;
+  font-weight: bold;
+  font-size: 80%;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkgoldenrod;
+}
+
+h5:hover {
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+}
+h6:hover {
+  color: darkgoldenrod;
+  cursor: pointer;
+}
+
+.flex-edit-delete {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.update {
+  width: 5vw;
+  height: 5vh;
+  font-weight: bold;
+  font-size: 80%;
+  cursor: pointer;
+  margin-left: 18%;
+}
+
+.cancel {
+  width: 5vw;
+  height: 5vh;
+  font-weight: bold;
+  font-size: 80%;
+  cursor: pointer;
+  margin-left: 10%;
 }
