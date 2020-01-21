@@ -13,9 +13,6 @@ class App extends Component {
       proteinInput: '',
       caloriesInput: ''
     }
-    this.updatePost = this.updatePost.bind(this);
-    this.deletePost = this.deletePost.bind(this);
-    this.createPost = this.createPost.bind(this);
   }
 
   componentDidMount(){
@@ -28,19 +25,19 @@ class App extends Component {
     })
   }
 
-  updatePost(id, nameInput, proteinInput, caloriesInput){
+  updatePost = (id, nameInput, proteinInput, caloriesInput) => {
     axios.put(`http://localhost:8989/api/post/${id}`, {nameInput, proteinInput, caloriesInput}).then(res => {
       this.setState({posts: res.data});
     })
   }
 
-  deletePost(id){
+  deletePost = id => {
     axios.delete(`http://localhost:8989/api/post/${id}`).then(res => {
       this.setState({posts: res.data});
     })
   }
 
-  createPost(nameInput, proteinInput, caloriesInput){
+  createPost = (nameInput, proteinInput, caloriesInput) => {
     axios.post('http://localhost:8989/api/post', {nameInput, proteinInput, caloriesInput}).then(res => {
       this.setState({posts: res.data});
     })
