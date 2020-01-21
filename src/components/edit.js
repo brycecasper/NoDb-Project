@@ -8,29 +8,25 @@ class Edit extends Component {
             proteinInput: props.proteinInput,
             caloriesInput: props.caloriesInput
         }
-        this.updatePost = this.updatePost.bind(this);
-        this.updateName = this.updateName.bind(this);
-        this.updateProtein = this.updateProtein.bind(this);
-        this.updateCalories = this.updateCalories.bind(this);
     }
 
-    updateName(event){
-        this.setState({nameInput: event.target.value});
-    }
-    updateProtein(event){
-        this.setState({proteinInput: event.target.value})
-    }
-    updateCalories(event){
-        this.setState({caloriesInput: event.target.value})
-    }
+    updateName = e => {
+        this.setState({nameInput: e.target.value});
+    };
+    updateProtein = e => {
+        this.setState({proteinInput: e.target.value})
+    };
+    updateCalories = e => {
+        this.setState({caloriesInput: e.target.value})
+    };
 
-    updatePost(){
+    updatePost = () => {
         const {nameInput, proteinInput, caloriesInput} = this.state;
         const {id, updatePostFn, hideEdit} = this.props;
 
         updatePostFn(id, nameInput, proteinInput, caloriesInput);
         hideEdit();
-    }
+    };
 
     render(){
         const {nameInput, proteinInput, caloriesInput} = this.state;

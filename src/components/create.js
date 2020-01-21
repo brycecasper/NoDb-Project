@@ -8,18 +8,16 @@ class Create extends Component {
             proteinInput: '',
             caloriesInput: ''
         }
-        this.handleInputChange = this.handleInputChange.bind(this);
-        this.createPost = this.createPost.bind(this);
     }
 
-    handleInputChange(event){
+    handleInputChange = (event) => {
         const {name, value} = event.target
         this.setState({
             [name]: value
-        });
+        })
     };
 
-    createPost(){
+    createPost = () => {
         const {nameInput, proteinInput, caloriesInput} = this.state;
         const {createPostFn} = this.props;
 

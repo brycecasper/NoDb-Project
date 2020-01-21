@@ -7,17 +7,15 @@ class Post extends Component {
         this.state = {
             editing: false
         }
-        this.showEdit = this.showEdit.bind(this);
-        this.hideEdit = this.hideEdit.bind(this);
     }
 
-    showEdit(){
+    showEdit = () => {
         this.setState({editing: true})
-    }
+    };
 
-    hideEdit(){
+    hideEdit = () => {
         this.setState({editing: false})
-    }
+    };
 
     render(){
         const {editing} = this.state;

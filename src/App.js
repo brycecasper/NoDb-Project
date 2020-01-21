@@ -15,33 +15,37 @@ class App extends Component {
     }
   }
 
-  componentDidMount(){
+  componentDidMount = () => {
     this.displayPost();
-  }
+  };
 
   displayPost = () => {
-    axios.get('/api/post').then(res => {
+    axios.get('/api/post')
+    .then(res => {
         this.setState({posts: res.data});
     })
-  }
+  };
 
   updatePost = (id, nameInput, proteinInput, caloriesInput) => {
-    axios.put(`http://localhost:8989/api/post/${id}`, {nameInput, proteinInput, caloriesInput}).then(res => {
+    axios.put(`http://localhost:8989/api/post/${id}`, {nameInput, proteinInput, caloriesInput})
+    .then(res => {
       this.setState({posts: res.data});
     })
-  }
+  };
 
   deletePost = id => {
-    axios.delete(`http://localhost:8989/api/post/${id}`).then(res => {
+    axios.delete(`http://localhost:8989/api/post/${id}`)
+    .then(res => {
       this.setState({posts: res.data});
     })
-  }
+  };
 
   createPost = (nameInput, proteinInput, caloriesInput) => {
-    axios.post('http://localhost:8989/api/post', {nameInput, proteinInput, caloriesInput}).then(res => {
+    axios.post('http://localhost:8989/api/post', {nameInput, proteinInput, caloriesInput})
+    .then(res => {
       this.setState({posts: res.data});
     })
-  }
+  };
 
   render(){
     return (
@@ -70,7 +74,7 @@ class App extends Component {
         </section>
         
       </div>
-    );
+    )
   }
 }
 
