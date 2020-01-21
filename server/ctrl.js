@@ -23,9 +23,9 @@ module.exports = {
         const postIndex = posts.findIndex(post => post.id === +updateId);
         posts[postIndex] = {
             id: +updateId,
-            nameInput: nameInput || posts.nameInput,
-            proteinInput: proteinInput || posts.proteinInput,
-            caloriesInput: caloriesInput || posts.caloriesInput
+            nameInput: nameInput || posts[postIndex].nameInput,
+            proteinInput: proteinInput || posts[postIndex].proteinInput,
+            caloriesInput: caloriesInput || posts[postIndex].caloriesInput
         };
         res.status(200).send(posts);
     },
